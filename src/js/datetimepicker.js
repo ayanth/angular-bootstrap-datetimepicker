@@ -32,6 +32,7 @@
       minuteStep: 5,
       minView: 'minute',
       startView: 'day'
+      format: 'YYYY-MM-DD HH:mm'
     })
     .directive('datetimepicker', ['$log', 'dateTimePickerConfig', function datetimepickerDirective($log, defaultConfig) {
 
@@ -59,7 +60,7 @@
       }
 
       var validateConfiguration = function validateConfiguration(configuration) {
-        var validOptions = ['startView', 'minView', 'minuteStep', 'dropdownSelector'];
+        var validOptions = ['startView', 'minView', 'minuteStep', 'dropdownSelector', 'format'];
 
         for (var prop in configuration) {
           //noinspection JSUnfilteredForInLoop
@@ -352,6 +353,10 @@
 
               var oldDate = ngModelController.$modelValue;
               ngModelController.$setViewValue(newDate);
+
+              if (configuration.format) {
+                ngModelController.$setViewValue(moment(newDate).format(configuration.format));
+              }
 
               if (configuration.dropdownSelector) {
                 jQuery(configuration.dropdownSelector).dropdown('toggle');
