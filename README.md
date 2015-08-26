@@ -158,6 +158,12 @@ data-on-set-time="onTimeSet"    <-- **This will NOT work, the ()'s are required*
 
 ## Configuration Options
 
+### format
+
+String. Default: 'YYYY-MM-DD HH:mm'
+
+The format of the returned selected date.
+
 ### startView
 
 String.  Default: 'day'
