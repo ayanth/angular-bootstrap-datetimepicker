@@ -43,6 +43,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/dalelotts/angular-bootstrap-datetimepicker.git"
+    "url": "git://github.com/maxlabelle/angular-bootstrap-datetimepicker.git"
   }
 }
