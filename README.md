@@ -162,7 +162,7 @@ data-on-set-time="onTimeSet"    <-- **This will NOT work, the ()'s are required*
 
 String. Default: 'YYYY-MM-DD HH:mm'
 
-The format of the returned selected date.
+The format of the returned selected date. The format string must be a moment compatible format string.
 
 ### startView
 
